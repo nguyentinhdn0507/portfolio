@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/context/ThemeProvider';
 import { LanguageProvider } from '@/context/LanguageContext';
 import Navbar from '@/components/ui/Navbar';
 import ParticleBackground from '@/components/3d/ParticleBackground';
+import AnimatedFavicon from '@/components/ui/AnimatedFavicon';
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ['latin', 'vietnamese'],
@@ -68,6 +69,9 @@ export default function RootLayout({
       <body className="relative min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased selection:bg-indigo-500/20 selection:text-indigo-400">
         <ThemeProvider>
           <LanguageProvider>
+            {/* Animated Favicon (Production only) */}
+            <AnimatedFavicon />
+
             {/* Ambient 3D Particle Background */}
             <ParticleBackground />
             
